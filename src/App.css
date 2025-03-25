@@ -4,7 +4,7 @@
   text-align: center;
   background-color: #000000;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .logo {
@@ -13,6 +13,22 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+/* Add media queries for mobile devices */
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 3.5em;
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    height: 2.5em;
+    padding: 1em;
+  }
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #6009edaa);
 }

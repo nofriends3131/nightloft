@@ -35,8 +35,8 @@ body {
 .moon {
   content: '';
   position: fixed;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   top: 15%;
   right: 15%;
   border-radius: 50%;
@@ -127,7 +127,7 @@ body {
 @keyframes shooting-star {
   0% {
     transform: translateX(0) translateY(0) rotate(45deg);
-    opacity: 1;
+    opacity: 100;
   }
   100% {
     transform: translateX(-1000px) translateY(1000px) rotate(45deg);

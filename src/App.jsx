@@ -1,27 +1,22 @@
-import nightloftlogo from './assets/logo.jpg'
-import hoodie from './assets/hooide design1.jpg'
-import tshirt1 from './assets/tshirt design1.jpg'  
-import tshirt2 from './assets/tshirt design2.jpg'
-import compression from './assets/compression shirt1.jpg'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Tshirt1Page from './pages/Tshirt1Page'
+import HoodiePage from './pages/HoodiePage'
+import Tshirt2Page from './pages/Tshirt2Page'
+import CompressionPage from './pages/CompressionPage'
+import HomePage from './pages/HomePage'
 import './App.css'
-function App() {
 
+function App() {
   return (
-    <>
-      <div>
-        <img src={nightloftlogo} className="logo" alt="React logo" />
-      </div>
-      <p className='text-white'>The biggest gym clothing brand in the Philippines</p>
-      <p className="read-the-docs">
-        chat nyo nalang ako sa messenger kung gusto nyo mag-order tinamad ako gumawa ng website
-      </p>
-      <div>
-      <img src={tshirt1} className="product-image" alt="React logo" />
-        <img src={hoodie} className="product-image" alt="React logo" />
-        <img src={tshirt2} className="product-image" alt="React logo" />
-        <img src={compression} className="product-image" alt="React logo" />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tshirt1" element={<Tshirt1Page />} />
+        <Route path="/hoodie" element={<HoodiePage />} />
+        <Route path="/tshirt2" element={<Tshirt2Page />} />
+        <Route path="/compression" element={<CompressionPage />} />
+      </Routes>
+    </Router>
   )
 }
 

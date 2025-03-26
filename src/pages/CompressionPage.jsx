@@ -1,11 +1,18 @@
+import BackButton from '../components/BackButton';
 import compression from '../assets/compression shirt1.jpg'
+
 function CompressionPage() {
-    return (
-      <div className="text-white">
-        <h1>Compression Design 1</h1>
-        <img src={compression} className="product-details" alt="Compression Design 1" />
-         <p> Get the support you need with our budget-friendly compression shirt. Featuring a stylish design and made from comfortable, breathable fabric—perfect for any workout. </p>
+  return (
+    <div className="product-page">
+      <BackButton />
+      <img src={compression} className="product-detail-image" alt="Compression Shirt" />
+      <div className="product-info">
+        <h2 className="product-title">Compression Shirt</h2>
+        <p className="product-description">Boost your confidence and performance with our budget-friendly compression t-shirt. Designed for comfort and support, it helps you feel your best during every workout, all at an unbeatable price!</p>
+        <p className="product-price">₱299</p>
       </div>
-    );
-  }
-  export default CompressionPage; 
+    </div>
+  );
+}
+
+export default CompressionPage; 

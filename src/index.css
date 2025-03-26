@@ -185,3 +185,120 @@ button:focus-visible {
   }
 }
 
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 250px;
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 1rem;
+  z-index: 100;
+  transform: translateX(-220px);
+  transition: transform 0.3s ease;
+}
+
+/* Adjust nav menu position back to top */
+.sidebar-nav {
+  margin-top: 2rem;
+}
+
+/* Show sidebar on hover */
+.sidebar:hover {
+  transform: translateX(0);
+}
+
+/* Add a vertical line indicator */
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    transparent, 
+    rgba(255, 255, 255, 0.5), 
+    transparent
+  );
+}
+
+/* Hide menu items when sidebar is not hovered */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show menu items when sidebar is hovered */
+.sidebar:hover .sidebar-menu {
+  opacity: 1;
+}
+
+.sidebar-menu li {
+  margin: 1.5rem 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+}
+
+/* Animate menu items when sidebar is hovered */
+.sidebar:hover .sidebar-menu li {
+  transform: translateX(0);
+}
+
+/* Add delay for each menu item */
+.sidebar:hover .sidebar-menu li:nth-child(1) { transition-delay: 0.1s; }
+.sidebar:hover .sidebar-menu li:nth-child(2) { transition-delay: 0.2s; }
+.sidebar:hover .sidebar-menu li:nth-child(3) { transition-delay: 0.3s; }
+.sidebar:hover .sidebar-menu li:nth-child(4) { transition-delay: 0.4s; }
+
+.sidebar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Adjust main content */
+#root {
+  margin-left: 30px;
+  padding: 2rem;
+  text-align: center;
+  width: calc(100vw - 30px);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  #root {
+    margin-left: 0;
+    width: 100vw;
+  }
+}
+

@@ -133,3 +133,195 @@
     animation: rheymark-spin infinite 20s linear;
   }
 }
+
+.product-page {
+  width: 100%;
+  padding: 80px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-detail-image {
+  height: 500px;
+  object-fit: contain;
+  margin: 30px;
+  margin-top: 50px;
+  filter: drop-shadow(0 0 2em #dbd3e8);
+  animation: float 6s ease-in-out infinite;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  padding: 12px 20px;
+  background: rgba(33, 31, 37, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button::before {
+  content: '←';
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background: rgba(96, 9, 237, 1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 20px rgba(96, 9, 237, 0.4),
+    0 0 40px rgba(96, 9, 237, 0.2);
+}
+
+.back-button:active {
+  transform: scale(0.95);
+}
+
+.product-info {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  width: 90%;
+}
+
+.product-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(96, 9, 237, 0.5);
+}
+
+.product-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.product-price {
+  color: #6009ed;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.floating-equipment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.equipment {
+  position: fixed;
+  font-size: 2.5rem;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 10px rgba(96, 9, 237, 0.5));
+}
+
+/* Dumbbells */
+.dumbbell-1 {
+  top: 15%;
+  left: 10%;
+  animation: float-rotate 8s infinite ease-in-out;
+}
+
+.dumbbell-2 {
+  top: 45%;
+  right: 15%;
+  animation: float-rotate 12s infinite ease-in-out reverse;
+}
+
+.dumbbell-3 {
+  bottom: 20%;
+  left: 20%;
+  animation: float-rotate 10s infinite ease-in-out;
+}
+
+/* Weights */
+.weight-1 {
+  top: 25%;
+  right: 25%;
+  animation: float-bounce 9s infinite ease-in-out;
+}
+
+.weight-2 {
+  bottom: 30%;
+  right: 10%;
+  animation: float-bounce 11s infinite ease-in-out;
+}
+
+.weight-3 {
+  top: 60%;
+  left: 15%;
+  animation: float-bounce 13s infinite ease-in-out reverse;
+}
+
+/* Barbells */
+.barbell-1 {
+  top: 10%;
+  right: 30%;
+  animation: float-spin 14s infinite ease-in-out;
+}
+
+.barbell-2 {
+  bottom: 15%;
+  right: 35%;
+  animation: float-spin 16s infinite ease-in-out reverse;
+}
+
+.barbell-3 {
+  top: 40%;
+  left: 25%;
+  animation: float-spin 15s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes float-rotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
+}
+
+@keyframes float-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+@keyframes float-spin {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-20px, -20px) rotate(360deg);
+  }
+}

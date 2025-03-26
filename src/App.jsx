@@ -4,6 +4,8 @@ import HoodiePage from './pages/HoodiePage'
 import Tshirt2Page from './pages/Tshirt2Page'
 import CompressionPage from './pages/CompressionPage'
 import HomePage from './pages/HomePage'
+import Sidebar from './components/Sidebar'
+import FloatingEquipment from './components/FloatingEquipment'
 import './App.css'
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <div className="stars-medium"></div>
       <div className="nebula"></div>
       <div className="moon"></div>
+      <FloatingEquipment />
+      <Sidebar />
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />

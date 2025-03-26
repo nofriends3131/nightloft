@@ -1,11 +1,18 @@
-import tshirt1 from '../assets/tshirt design1.jpg'  
+import BackButton from '../components/BackButton';
+import tshirt1 from '../assets/tshirt design1.jpg'
+
 function Tshirt1Page() {
   return (
-    <div className="text-white">
-      <h1>T-Shirt Design 1</h1>
-      <img src={tshirt1} className="product-details" alt="T-Shirt Design 1" />
-      <p>Get the perfect blend of style and affordability with our budget-friendly gym t-shirt. Featuring a cool design and made from comfortable, breathable fabric—ideal for any workout or casual day.</p>
+    <div className="product-page">
+      <BackButton />
+      <img src={tshirt1} className="product-detail-image" alt="T-Shirt Design 1" />
+      <div className="product-info">
+        <h2 className="product-title">T-Shirt Design 1</h2>
+        <p className="product-description">Stand out in the gym with our budget-friendly t-shirt. Featuring a modern design and a comfortable fit, it’s perfect for any workout or casual day out.</p>
+        <p className="product-price">₱249</p>
+      </div>
     </div>
   );
 }
+
 export default Tshirt1Page; 

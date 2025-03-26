@@ -65,7 +65,7 @@
   margin-top: 100px;
 }
 .product-image:hover {
-  filter: drop-shadow(0 0 2em #6009edaa);
+  filter: drop-shadow(0 0 2em #dbd3e8);
 }
 .product-details{
   height: 40%;
@@ -78,5 +78,24 @@
   transition: filter 300ms;
 }
 .product-details:hover {
-  filter: drop-shadow(0 0 2em #6009edaa);
+  filter: drop-shadow(0 0 2em #dbd3e8);
+}
+.rheymark {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+@keyframes rheymark-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rheymark {
+    animation: rheymark-spin infinite 20s linear;
+  }
 }

@@ -4,6 +4,7 @@ import hoodie from '../assets/hoodie design1.jpg'
 import tshirt1 from '../assets/tshirt design1.jpg'  
 import tshirt2 from '../assets/tshirt design2.jpg'
 import compression from '../assets/compression shirt1.jpg'
+import rheymark from '../assets/rheymark.jpg'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <p className="read-the-docs">
               bili na kayo pang confine ni rheymark HHAHAHAH
             </p>
+            <div> <img src={rheymark} className="rheymark" alt="Rheymark" /> </div>
             <div>
               <Link to="/tshirt1">
                 <img src={tshirt1} className="product-image" alt="T-Shirt Design 1" />

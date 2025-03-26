@@ -12,8 +12,8 @@ function App() {
             <div>
               <img src={nightloftlogo} className="logo" alt="React logo" />
             </div>
-            <p className='text-white'>The biggest gym clothing brand in the Philippines</p>
-            <p className="read-the-docs">
+            <p className='text-white label-text'>The biggest gym clothing brand in the Philippines</p>
+            <p className="read-the-docs label-text">
               bili na kayo pang confine ni rheymark HHAHAHAH
             </p>
             <div> <img src={rheymark} className="rheymark" alt="Rheymark" /> </div>

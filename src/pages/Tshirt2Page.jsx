@@ -7,7 +7,7 @@ function Tshirt2Page() {
       <BackButton />
       <img src={tshirt2} className="product-detail-image" alt="T-Shirt Design 2" />
       <div className="product-info">
-        <h2 className="product-title">T-Shirt Design 2</h2>
+        <h2 className="product-title">Sisyphus</h2>
         <p className="product-description">Train hard, look great, and save more with our affordable gym t-shirt. Featuring a stylish look and ultimate comfort.</p>
         <p className="product-price">₱249</p>
       </div>

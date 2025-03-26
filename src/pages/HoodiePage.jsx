@@ -7,7 +7,7 @@ function HoodiePage() {
       <BackButton />
       <img src={hoodie} className="product-detail-image" alt="Hoodie Design 1" />
       <div className="product-info">
-        <h2 className="product-title">Nightloft Hoodie</h2>
+        <h2 className="product-title">Zeus</h2>
         <p className="product-description">Stay comfortable and stylish with our affordable gym hoodie. Perfect for workouts or everyday wear, designed for both durability and comfort without the high price tag.
         </p>
         <p className="product-price">₱359</p>

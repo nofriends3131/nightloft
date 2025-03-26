@@ -17,6 +17,7 @@ function App() {
       <div className="moon"></div>
       <FloatingEquipment />
       <Sidebar />
+      <div className="page-content">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -25,7 +26,8 @@ function App() {
           <Route path="/tshirt2" element={<Tshirt2Page />} />
           <Route path="/compression" element={<CompressionPage />} />
         </Routes>
-      </Router>
+        </Router>
+      </div>
     </>
   )
 }

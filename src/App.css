@@ -1,5 +1,4 @@
 #root {
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background-color: #000000;
@@ -57,6 +56,8 @@
 }
 
 .read-the-docs {
+  position: relative;
+  z-index: 4;
   color: #888;
 }
 .product-image {
@@ -231,7 +232,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: -1;
 }
 
 .equipment {
@@ -239,6 +240,7 @@
   font-size: 2.5rem;
   opacity: 0.6;
   filter: drop-shadow(0 0 10px rgba(96, 9, 237, 0.5));
+  z-index: -1;
 }
 
 /* Dumbbells */
@@ -246,18 +248,21 @@
   top: 15%;
   left: 10%;
   animation: float-rotate 8s infinite ease-in-out;
+  z-index: -1;
 }
 
 .dumbbell-2 {
   top: 45%;
   right: 15%;
   animation: float-rotate 12s infinite ease-in-out reverse;
+  z-index: -1;
 }
 
 .dumbbell-3 {
   bottom: 20%;
   left: 20%;
   animation: float-rotate 10s infinite ease-in-out;
+  z-index: -1;
 }
 
 /* Weights */
@@ -265,18 +270,21 @@
   top: 25%;
   right: 25%;
   animation: float-bounce 9s infinite ease-in-out;
+  z-index: -1;
 }
 
 .weight-2 {
   bottom: 30%;
   right: 10%;
-  animation: float-bounce 11s infinite ease-in-out;
+  animation: float-bounce 11s infinite ease-in-out; 
+  z-index: -1;
 }
 
 .weight-3 {
   top: 60%;
   left: 15%;
   animation: float-bounce 13s infinite ease-in-out reverse;
+  z-index: -1;
 }
 
 /* Barbells */
@@ -284,18 +292,21 @@
   top: 10%;
   right: 30%;
   animation: float-spin 14s infinite ease-in-out;
+  z-index: -1;
 }
 
 .barbell-2 {
   bottom: 15%;
   right: 35%;
   animation: float-spin 16s infinite ease-in-out reverse;
+  z-index: -1;
 }
 
 .barbell-3 {
   top: 40%;
   left: 25%;
   animation: float-spin 15s infinite ease-in-out;
+  z-index: -1;
 }
 
 /* Animations */

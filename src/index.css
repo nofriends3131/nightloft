@@ -46,7 +46,7 @@ body {
     0 0 30px #fff,
     0 0 60px rgba(255, 255, 255, 0.3),
     0 0 90px rgba(255, 255, 255, 0.2);
-  z-index: -3;
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -69,6 +69,7 @@ body {
   background-size: 250px 250px;
   animation: stars-animation 15s linear infinite;
   opacity: 0.7;
+  z-index: -2;
 }
 
 /* Stars layer 2 */
@@ -88,6 +89,7 @@ body {
   background-size: 350px 350px;
   animation: stars-animation 30s linear infinite;
   opacity: 0.5;
+  z-index: -3;
 }
 
 @keyframes stars-animation {

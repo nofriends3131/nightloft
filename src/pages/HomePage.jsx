@@ -12,6 +12,7 @@ import LoginModal from '../components/LoginModal'
 function HomePage() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [user, setUser] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     // Check if user is logged in
@@ -19,6 +20,14 @@ function HomePage() {
     if (userData) {
       setUser(JSON.parse(userData));
     }
+
+    // Check if mobile
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleLoginSuccess = () => {
@@ -66,20 +75,37 @@ function HomePage() {
       <div className="rheymark-container">
         <img src={rheymark} className="rheymark" alt="Rheymark" />
       </div>
-      <div className="products-grid">
-        <Link to="/tshirt1" className="product-link">
-          <img src={tshirt1} className="product-image" alt="T-Shirt Design 1" />
-        </Link>
-        <Link to="/hoodie" className="product-link">
-          <img src={hoodie} className="product-image" alt="Hoodie" />
-        </Link>
-        <Link to="/tshirt2" className="product-link">
-          <img src={tshirt2} className="product-image" alt="T-Shirt Design 2" />
-        </Link>
-        <Link to="/compression" className="product-link">
-          <img src={compression} className="product-image" alt="Compression Shirt" />
-        </Link>
-      </div>
+      {isMobile ? (
+        <div className="mobile-products">
+          <Link to="/tshirt1" className="product-link">
+            <img src={tshirt1} className="product-image" alt="T-Shirt Design 1" />
+          </Link>
+          <Link to="/hoodie" className="product-link">
+            <img src={hoodie} className="product-image" alt="Hoodie" />
+          </Link>
+          <Link to="/tshirt2" className="product-link">
+            <img src={tshirt2} className="product-image" alt="T-Shirt Design 2" />
+          </Link>
+          <Link to="/compression" className="product-link">
+            <img src={compression} className="product-image" alt="Compression Shirt" />
+          </Link>
+        </div>
+      ) : (
+        <div className="products-grid">
+          <Link to="/tshirt1" className="product-link">
+            <img src={tshirt1} className="product-image" alt="T-Shirt Design 1" />
+          </Link>
+          <Link to="/hoodie" className="product-link">
+            <img src={hoodie} className="product-image" alt="Hoodie" />
+          </Link>
+          <Link to="/tshirt2" className="product-link">
+            <img src={tshirt2} className="product-image" alt="T-Shirt Design 2" />
+          </Link>
+          <Link to="/compression" className="product-link">
+            <img src={compression} className="product-image" alt="Compression Shirt" />
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

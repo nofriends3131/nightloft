@@ -1,5 +1,6 @@
 import BackButton from '../components/BackButton';
 import hoodie from '../assets/hoodie design1.jpg'
+import { FaShoppingCart, FaBolt } from 'react-icons/fa';
 
 function HoodiePage() {
   return (
@@ -11,6 +12,14 @@ function HoodiePage() {
         <p className="product-description">Stay comfortable and stylish with our affordable gym hoodie. Perfect for workouts or everyday wear, designed for both durability and comfort without the high price tag.
         </p>
         <p className="product-price">₱359</p>
+        <div className="product-actions">
+          <button className="action-button add-to-cart">
+            <FaShoppingCart /> Add to Cart
+          </button>
+          <button className="action-button buy-now">
+            <FaBolt /> Buy Now
+          </button>
+        </div>
       </div>
     </div>
   );

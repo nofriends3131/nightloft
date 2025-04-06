@@ -6,6 +6,7 @@ import Tshirt2Page from './pages/Tshirt2Page'
 import CompressionPage from './pages/CompressionPage'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
+import Products from './pages/Products'
 import Sidebar from './components/Sidebar'
 import FloatingEquipment from './components/FloatingEquipment'
 import MobileNav from './components/MobileNav'
@@ -39,6 +40,7 @@ function App() {
         <div className="page-content">
           <Routes>
             <Route path="/" element={<HomePage user={user} onLoginSuccess={handleLoginSuccess} />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/tshirt1" element={<Tshirt1Page />} />
             <Route path="/hoodie" element={<HoodiePage />} />
             <Route path="/tshirt2" element={<Tshirt2Page />} />

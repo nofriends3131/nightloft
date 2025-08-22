@@ -7,6 +7,7 @@ import CompressionPage from './pages/CompressionPage'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
 import Products from './pages/Products'
+import Contact from './pages/Contact'
 import Sidebar from './components/Sidebar'
 import FloatingEquipment from './components/FloatingEquipment'
 import MobileNav from './components/MobileNav'
@@ -46,6 +47,7 @@ function App() {
             <Route path="/tshirt2" element={<Tshirt2Page />} />
             <Route path="/compression" element={<CompressionPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
